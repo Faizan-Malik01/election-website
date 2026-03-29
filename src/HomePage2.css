@@ -1,0 +1,436 @@
+:root {
+  --primary-bg: #0a1332; /* Dark blue from image */
+  --accent-color: #c41e3a; /* Red color for button */
+}
+
+.hero-section {
+  height: 100vh;
+  background-color: var(--primary-bg);
+  background-image: linear-gradient(rgba(10, 19, 50, 0.8), rgba(10, 19, 50, 0.8)), 
+                    url('C:\Users\dell\Desktop\react-router\src\images\hero-section2-bg-img.jpg'); /* Pattern for flag effect */
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-container {
+  height: 100vh;
+  width: 100%;
+}
+
+.tagline {
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.desc-text {
+  max-width: 500px;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Image Styling with Brush Effect Shape */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Button Hover Animation */
+.btn-explore {
+  padding: 12px 35px;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s ease;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-explore::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #dc3545; /* Adjust color according to image */
+  transition: left 1s ease;
+  z-index: -1;
+}
+
+.btn-explore:hover::before {
+  left: 0;
+}
+
+.btn-explore:hover {
+  border-color: transparent;
+}
+
+/* Arrows Styling */
+.nav-arrows {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-arrows.visible {
+  opacity: 1;
+}
+
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(11, 148, 144, 0.1);
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.arrow-btn:hover {
+  background: rgba(211, 3, 3, 0.3);
+}
+
+.arrow-btn.left { left: 20px; }
+.arrow-btn.right { right: 20px; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .display-3 {
+    font-size: 2.5rem;
+  }
+  .hero-section {
+    text-align: center;
+  }
+  .desc-text {
+    margin: 0 auto;
+  }
+  .arrow-btn {
+    padding: 10px;
+  }
+}
+
+/* About politicion css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-section {
+    background-color: #ffffff;
+    overflow: hidden;
+    margin-top: 100px;
+}
+
+.politician-img-wrapper img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.main-heading {
+    color: #0b1c39; /* Dark Navy Blue */
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+
+.ampersand {
+    color: #e61e4d; /* Red color from image */
+}
+
+.lead-text {
+    color: #707b8e;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Gradient Button */
+.custom-btn {
+    background: linear-gradient(90deg, #4451ba 0%, #d52851 100%);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 12px 35px !important;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.custom-btn:hover {
+    opacity: 0.9;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .main-heading {
+        font-size: 2.5rem;
+    }
+    .content-box {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-heading {
+        font-size: 2rem;
+    }
+}
+
+/* CampaingnCard css */
+
+/* Font and Base Styles */
+.campaign-card {
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    padding: 60px 40px !important;
+}
+
+.campaign-card:hover {
+    z-index: 1;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Background Colors */
+.bg-blue { background-color: #2b50d3; }
+.bg-green { background-color: #00c691; }
+.bg-red { background-color: #e21f41; }
+
+/* Icon Circle with Dashed Border */
+.icon-circle {
+    width: 100px;
+    height: 100px;
+    border: 1px dashed rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(26, 24, 24);
+    margin: 0 auto;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Circular Arrow Button */
+.arrow-btn {
+    width: 55px;
+    height: 55px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.arrow-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Responsiveness Adjustments */
+@media (max-width: 991px) {
+    .campaign-card {
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 767px) {
+    .row.g-0 {
+        gap: 15px; /* Mobile par thoda gap acha lagta hai */
+    }
+    .campaign-card {
+        border-radius: 10px; /* Mobile par rounded corners */
+    }
+}
+
+
+/* Campaign Banner css */
+
+
+/* Main Section Styles */
+.campaign-section {
+  margin-top: 100px;
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    /* Gradient Overlay and Background Image */
+    background: linear-gradient(90deg, rgba(46, 68, 175, 0.85) 0%, rgba(223, 44, 73, 0.85) 100%), 
+                url('C:\Users\dell\Desktop\react-router\src\images\countr-section-bg-img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect ke liye, scroll nahi hoga piche ka image */
+    padding: 60px 20px;
+}
+
+/* Campaign Events Tag */
+.campaign-label {
+    display: inline-block;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+    padding: 0 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Main Heading */
+.main-heading {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+/* Time Slot Text */
+.time-slot {
+    color: #2ecc71;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+/* Timer Container */
+.timer-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* White Boxes */
+.time-box {
+    background: #ffffff;
+    color: #d63031;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.time-box h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.time-box span {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .main-heading {
+        font-size: 2rem;
+    }
+    .time-box {
+        width: 80px;
+        height: 80px;
+    }
+    .time-box h2 {
+        font-size: 1.5rem;
+    }
+    .time-box span {
+        font-size: 0.7rem;
+    }
+}
+
+
+
+/* Counter section css */
+
+
+.stats-section {
+    position: relative;
+    padding: 80px 0;
+    color: white;
+    text-align: center;
+    /* Blue to Red Gradient Overlay with Flag Background */
+    background: linear-gradient(90deg, rgba(46, 68, 175, 0.9) 0%, rgba(223, 44, 73, 0.9) 100%), 
+                url('C:\Users\dell\Desktop\react-router\src\images\countersection-bg-img');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.stat-item {
+    margin-bottom: 30px;
+}
+
+.stat-number {
+    font-size: 4rem; /* Desktop size */
+    font-weight: 700;
+    margin-bottom: 0;
+    display: block;
+}
+
+.stat-title {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .stat-number {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    .stat-title {
+        font-size: 0.8rem;
+    }
+    .stats-section {
+        padding: 50px 0;
+    }
+}

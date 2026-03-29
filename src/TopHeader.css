@@ -1,0 +1,88 @@
+/* Top Bar Styles */
+.header-wrapper {
+    width: 100%;
+    z-index: 1000;
+}
+
+.top-bar {
+    background-color: #0c1228; /* Dark Navy Color */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.top-bar a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.top-bar a:hover {
+    color: #df0946;
+}
+
+/* Main Navbar Styles */
+.main-navbar {
+    background-color: #1a2238; /* Slightly lighter navy */
+}
+
+.navbar-brand {
+    letter-spacing: 1px;
+}
+
+/* Logo Gear Icon Placeholder */
+.custom-logo-gear {
+    width: 30px;
+    height: 30px;
+    border: 4px dotted #df0946;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+.custom-logo-gear::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #4e54c8;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Nav Links */
+.nav-link {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.nav-link:hover {
+    color: #df0946 !important;
+}
+
+/* Make Donation Button Gradient */
+.donation-btn {
+    background: linear-gradient(to right, #4e54c8, #df0946) !important;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.4s;
+}
+
+.donation-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 991px) {
+    .main-navbar {
+        background-color: #0c1228;
+    }
+    .nav-link {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .donation-btn {
+        margin-top: 15px;
+        width: 100%;
+    }
+}

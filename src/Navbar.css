@@ -1,0 +1,129 @@
+/* Navbar Main Background */
+.custom-navbar {
+    background-color: transparent;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    position: fixed;
+    width: 100%;
+}
+/* --- Navbar when Scrolled (> 50px) --- */
+.navbar-scrolled {
+    background-color: #1a2333 !important; /* Image wala Navy Blue solid color */
+    padding: 12px 0; /* Scroll par navbar thoda "slim" ho jayega professional look ke liye */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-bottom: none;
+}
+
+/* Logo icon styling */
+.logo-text {
+    font-weight: 700;
+    font-size: 26px;
+    color: #fff !important;
+}
+
+.logo-icon {
+    width: 32px; height: 32px;
+    border: 3px dashed #fff;
+    border-radius: 50%;
+    margin-right: 12px;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.inner-circle {
+    width: 14px; height: 14px;
+    background: radial-gradient(circle, #ff3b3b 30%, #4a5dff 100%);
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* --- CENTER EXPANDING LINE ANIMATION --- */
+.nav-item-custom {
+    color: #cbd5e0 !important;
+    font-weight: 600;
+    font-size: 13px;
+    margin: 0 15px;
+    position: relative;
+    padding: 25px 0 !important; /* Padding for hover area */
+    transition: color 0.3s;
+}
+
+.nav-item-custom::before {
+    content: '';
+    position: absolute;
+    top: -11px; /* Navbar ke ekdam top par line dikhane ke liye */
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: #ff3b3b; /* Red line as per image */
+    transition: all 0.4s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.nav-item-custom:hover::before,
+.nav-item-custom.active::before {
+    width: 100%; /* Center se bahar ki taraf expand hogi */
+}
+
+.nav-item-custom:hover {
+    color: #fff !important;
+}
+
+/* Dropdown Styling */
+.nav-dropdown-wrapper {
+    position: relative;
+}
+
+/* Bootstrap default dropdown hide */
+.custom-dropdown-menu .dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-menu {
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    margin-top: 0 !important;
+    background: #fff;
+}
+
+.dropdown-item {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a2b5a;
+    padding: 10px 25px;
+    transition: all 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: transparent;
+    color: #ff3b3b;
+    padding-left: 30px;
+}
+
+/* Donation Button */
+.donation-btn {
+    background: linear-gradient(90deg, #4451fe 0%, #e62e6b 100%);
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-weight: 700;
+    font-size: 13px;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .nav-item-custom {
+        padding: 12px 0 !important;
+        text-align: center;
+    }
+    .nav-item-custom::before {
+        display: none; /* Mobile pe top line zaruri nahi */
+    }
+    .dropdown-menu {
+        text-align: center;
+        background: rgba(255,255,255,0.05);
+    }
+    .dropdown-item { color: #fff; }
+    .donation-btn { width: 100%; margin-top: 15px; }
+}

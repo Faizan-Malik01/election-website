@@ -1,0 +1,17 @@
+.scroll-to-top button {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out !important;
+}
+
+.scroll-to-top button:hover {
+    transform: scale(1.1);
+    background-color: #8a172e !important; /* Hover par thoda dark */
+}
+
+/* Mobile Devices ke liye size thoda chota */
+@media (max-width: 576px) {
+    .scroll-to-top button {
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
