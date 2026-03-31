@@ -131,6 +131,7 @@ function ElectianNavbar(){
               <NavDropdown show={showHome} className="custom-dropdown-menu">
                 <LinkContainer to="/"><NavDropdown.Item>HOME STYLE 1</NavDropdown.Item></LinkContainer>
                 <LinkContainer to="/HomePage2"><NavDropdown.Item>HOME STYLE 2</NavDropdown.Item></LinkContainer>
+
               </NavDropdown>
             </div>
 

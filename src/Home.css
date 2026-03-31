@@ -141,49 +141,50 @@ html, body {
 /* Slider Container */
 .slider-section {
     position: relative;
-    padding: 0 50px;
+    padding: 0 50px; /* Desktop padding */
     margin-top: 100px;
+}
+
+/* --- MOBILE RESPONSIVE FIX --- */
+@media (max-width: 768px) {
+    .slider-section {
+        padding: 0 15px; /* Mobile par side padding kam kar di */
+        margin-top: 50px; /* Mobile par gap kam kar diya */
+    }
+    
+    /* Mobile par arrows hamesha dikhne chahiye kyunki hover nahi hota */
+    .custom-arrow {
+        opacity: 1 !important;
+        visibility: visible !important;
+        width: 35px; /* Mobile par arrows thode chhote */
+        height: 35px;
+    }
+
+    .prev-arrow { left: 5px !important; }
+    .next-arrow { right: 5px !important; }
 }
 
 /* Card Styling */
 .custom-card {
     transition: transform 0.3s ease;
-    min-height: 400px;
+    min-height: 380px; /* Thoda kam kiya taaki mobile par fit aaye */
     background: #fff;
     margin-bottom: 20px;
 }
 
-.custom-card:hover {
-    transform: translateY(-10px);
-}
-
 /* Icon Circle */
 .icon-circle {
-    width: 100px;
-    height: 100px;
+    width: 80px;  /* Size thoda adjust kiya */
+    height: 80px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 40px;
+    font-size: 30px;
 }
 
-/* Details Button */
-.details-btn {
-    border: 1px solid #dc3545;
-    color: #0d1632;
-    padding: 8px 30px;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.details-btn:hover {
-    background-color: #dc3545;
-    color: white;
-}
-
-/* 1. Shuru mein arrows ko hide kar do */
+/* Arrows desktop hover logic */
 .custom-arrow {
     position: absolute;
     top: 50%;
@@ -198,37 +199,18 @@ html, body {
     justify-content: center;
     cursor: pointer;
     z-index: 10;
-    
-    /* --- Ye lines important hain --- */
-    opacity: 0;                /* Bilkul gayab */
-    visibility: hidden;        /* Click bhi nahi hoga jab tak dikhega nahi */
-    transition: all 0.4s ease; /* Smooth aane ke liye */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
 }
 
-/* 2. Jab user '.slider-section' par mouse le jaye, tab arrows dikhao */
-.slider-section:hover .custom-arrow {
-    opacity: 1;                /* Show ho jaye */
-    visibility: visible;       /* Clickable ho jaye */
-}
-
-/* Thoda extra effect: Arrows ko thoda side se slide hote hue dikhane ke liye */
-.prev-arrow { 
-    left: -10px; /* Shuru ki position thodi andar */
-}
-.next-arrow { 
-    right: -10px; 
-}
-
-.slider-section:hover .prev-arrow { 
-    left: -25px; /* Hover par apni asli jagah par aa jaye */
-}
-.slider-section:hover .next-arrow { 
-    right: -25px; 
-}
-
-/* Baki arrow hover (color change) pehle jaisa hi rahega */
-.custom-arrow:hover {
-    background-color: #0d1632;
+@media (min-width: 769px) {
+    .slider-section:hover .custom-arrow {
+        opacity: 1;
+        visibility: visible;
+    }
+    .slider-section:hover .prev-arrow { left: -25px; }
+    .slider-section:hover .next-arrow { right: -25px; }
 }
 
 

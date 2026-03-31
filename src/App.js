@@ -14,7 +14,6 @@ import Footer from "./components/footer.js";
 import ElectianNavbar from "./components/Navbar.js";
 import HomePage2 from "./pages/HomePage2.js";
 import ScrollToTop from "./components/ScrollToTop.js";
-// import TopHeader2 from "./components/TopHeader2.js";
 
 function App() {
   return (
@@ -22,7 +21,7 @@ function App() {
     
     <div className="container-fluid p-0"> {/* container typo fixed */}
     {/* <TopHeader2/> */}
-      <Router>
+      <Router basename="/election-website">
         
         <ElectianNavbar/>
 
